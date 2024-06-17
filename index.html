@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbacoa Party!</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body id="rolagem">
+    <script src="./script.js"></script>
+    <div class="barra"></div>
+
+
+    <div class="container" id="container">
+
+        <div class="central">
+
+            <h2>QUANTAS PESSOAS IRÃO AO CHURRASCO?</h2>
+
+            <div class="homem">
+                <img src="./img/homem.png" alt="">
+                <input type="text" name="homens" id="homens" placeholder="Homens"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+            </div>
+
+            <div class="mulher">
+                <img src="./img/mulher.png" alt="">
+                <input type="text" name="mulher" id="mulheres" placeholder="Mulheres"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+            </div>
+
+            <div class="crianca">
+                <img src="./img/crianca.png" alt="">
+                <input type="text" name="crianca" id="criancas" placeholder="Crianças"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+            </div>
+
+            <h2>QUAL A DURAÇÃO DO EVENTO?</h2>
+
+            <input type="text" id="duracao" placeholder="Horas"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+
+            <h2>VAI TER ALGUMA COMIDA DE ACOMPANHAMENTO?</h2>
+
+            <div class="centralizar">
+                <input type="radio" class="input-radio" id="sim" name="acompanhamento" value="sim" checked>
+                <label for="sim">
+                    <div class="radio-btn"></div>
+                    <span>Sim</span>
+                </label>
+                <input type="radio" class="input-radio" id="nao" name="acompanhamento" value="nao">
+                <label for="nao">
+                    <div class="radio-btn"></div>
+                    <span>Não</span>
+                </label>
+            </div>
+
+
+            <div class="button" onclick="calcular()">CALCULAR</div>
+        </div>
+
+    </div>
+
+    <div id="modal">
+
+        <div class="resultado">
+
+            <div class="fechar" onclick="fechar()">X</div>
+
+
+            <h2>VOCÊ VAI PRECISAR DE:</h2>
+
+            <div class="carne">
+                <img src="./img/carnegado.png" alt="">
+                <img src="./img/carnefrango.png" alt="">
+                <img src="./img/salsichas.png" alt="">
+                <img src="./img/porco.png" alt="">
+                <h3 id="carne">0 kg de carne</h3>
+            </div>
+
+            <hr>
+            <div class="bebidas">
+                <div class="cerveja">
+                    <img src="./img/cerveja1.png" alt="">
+                    <h3 id="cerveja">0 litros de cerveja</h3>
+                </div>
+                <div class="agua">
+                    <img src="./img/bebidas.png" alt="">
+                    <h3 id="agua">0 litros de água/refri/suco</h3>
+                </div>
+            </div>
+
+            <hr>
+            <div id="check" class="acompanhamentos">
+                <img src="./img/salada.png" alt="">
+                <h3 id="acompanhamentos">0 kg de acompanhamentos</h3>
+            </div>
+
+            <hr id="hr">
+            <div class="resultItens">
+                <div>
+                    <img src="./img/copos.png" alt="">
+                    <h3 id="copos" class="itens"></h3>
+                    <h3> copos</h3>
+                </div>
+                <div>
+                    <img src="./img/pratos.png" alt="">
+                    <h3 id="pratos" class="itens"></h3>
+                    <h3> pratos</h3>
+                </div>
+                <div>
+                    <img src="./img/talheres (1).png" alt="">
+                    <h3 id="talheres" class="itens"></h3>
+                    <h3> talheres</h3>
+                </div>
+                <div>
+                    <img src="./img/guardanapo (1).png" alt="">
+                    <h3 id="guardanapos" class="itens"></h3>
+                    <h3> guardanapos</h3>
+                </div>
+                <div>
+                    <img src="./img/carvao (2).png" alt="">
+                    <h3 id="carvao" class="itens"></h3>
+                    <h3> kg de carvão</h3>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+</body>
+
+</html>
